@@ -4,13 +4,13 @@ from django.db import models
 
 
 class EventTypeChoices(models.TextChoices):
-    CHUVA = "Chuva excessiva"
-    GEADA = "Geada"
-    GRANIZO = "Granizo"
-    SECA = "Seca"
-    VENDAVAL = "Vendaval"
-    RAIO = "Raio"
-    OUTRO = "Outro"
+    CHUVA = "chuva excessiva"
+    GEADA = "geada"
+    GRANIZO = "granizo"
+    SECA = "seca"
+    VENDAVAL = "vendaval"
+    RAIO = "raio"
+    OUTRO = "outro"
 
 
 class Loss(models.Model):
