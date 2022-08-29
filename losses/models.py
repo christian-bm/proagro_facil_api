@@ -1,6 +1,7 @@
 import uuid
 
 from django.db import models
+from django.utils import timezone
 
 
 class EventTypeChoices(models.TextChoices):
@@ -28,3 +29,5 @@ class Loss(models.Model):
     event_type = models.CharField(
         max_length=20, choices=EventTypeChoices.choices, default=EventTypeChoices.OUTRO
     )
+    create_at = models.DateTimeField(default=timezone.now, editable=False)
+    update_at = models.DateTimeField(auto_now=True)
