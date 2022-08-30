@@ -11,7 +11,7 @@ class ListCreateLossView(generics.ListCreateAPIView):
     def get_queryset(self):
         losses = Loss.objects.all()
 
-        return losses.order_by("update_at").reverse()
+        return losses.order_by("harvest_date").reverse()
 
 
 class RetrieveUpdateDestroyLossView(generics.RetrieveUpdateDestroyAPIView):
