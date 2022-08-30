@@ -11,7 +11,7 @@ class ListCreateLossView(generics.ListCreateAPIView):
     def get_queryset(self):
         losses = Loss.objects.all()
 
-        return losses.order_by("harvest_date").reverse()
+        return losses.order_by("create_at").reverse()
 
 
 class RetrieveUpdateDestroyLossView(generics.RetrieveUpdateDestroyAPIView):
@@ -19,3 +19,11 @@ class RetrieveUpdateDestroyLossView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = LossSerializer
 
     lookup_url_kwarg = "loss_id"
+
+
+class ListCpfLossView(generics.ListAPIView):
+    queryset = Loss.objects.all()
+    serializer_class = LossSerializer
+
+    def get_queryset(self):
+        return Loss.objects.filter(cpf=self.kwargs["cpf"])
