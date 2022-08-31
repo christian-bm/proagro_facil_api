@@ -22,7 +22,7 @@ Requisições para a API devem seguir os padrões:
 -   Response 200 (application/json)
 
     -   Body
-
+        ```
         {
             "count": 123,
             "next": "http://api.example.org/accounts/?page=4",
@@ -45,14 +45,14 @@ Requisições para a API devem seguir os padrões:
                 ...
             ]
         }
-
+        ```
 #
 ## [``POST``] /api/losses/
 
 -   Request (application/json)
 
     -   Body
-
+        ```
         {
             "first_name": "string",
             "last_name": "string",
@@ -64,11 +64,12 @@ Requisições para a API devem seguir os padrões:
             "harvest_date": "2022-08-31",
             "event_type": "chuva excessiva"
         }
+        ```
 #
 -   Response 201 (application/json)
 
     - Body
-
+        ```
         {
             "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
             "first_name": "string",
@@ -83,6 +84,7 @@ Requisições para a API devem seguir os padrões:
             "create_at": "2022-08-31T17:35:12.515Z",
             "update_at": "2022-08-31T17:35:12.515Z"
         }
+        ```
 #
 ## [``GET``] /api/losses/{loss_id}/
 
@@ -93,7 +95,7 @@ Requisições para a API devem seguir os padrões:
 -   Response 200 (application/json)
 
     -   Body
-
+        ```
         {
             "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
             "first_name": "string",
@@ -108,13 +110,14 @@ Requisições para a API devem seguir os padrões:
             "create_at": "2022-08-31T17:34:23.343Z",
             "update_at": "2022-08-31T17:34:23.343Z"
         }
+        ```
 #
 ## [``PUT``] /api/losses/{loss_id}/
 
 - Request (application/json)
 
     - Body (obrigatorio)
-
+        ```
         {
             "first_name": "string",
             "last_name": "string",
@@ -126,11 +129,12 @@ Requisições para a API devem seguir os padrões:
             "harvest_date": "2022-08-31",
             "event_type": "chuva excessiva"
         }
+        ```
 
 -   Response 200 (application/json)
 
     -   Body
-
+        ```
         {
             "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
             "first_name": "string",
@@ -145,13 +149,14 @@ Requisições para a API devem seguir os padrões:
             "create_at": "2022-08-31T17:34:23.343Z",
             "update_at": "2022-08-31T17:34:23.343Z"
         }
+        ```
 #
 ## [``PATCH``] /api/losses/{loss_id}/
 
 - Request (application/json)
 
     - Body
-
+        ```
         {
             "first_name": "string",
             "last_name": "string",
@@ -163,11 +168,12 @@ Requisições para a API devem seguir os padrões:
             "harvest_date": "2022-08-31",
             "event_type": "chuva excessiva"
         }
+        ```
 
 -   Response 200 (application/json)
 
     -   Body
-
+        ```
         {
             "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
             "first_name": "string",
@@ -182,6 +188,7 @@ Requisições para a API devem seguir os padrões:
             "create_at": "2022-08-31T17:34:23.343Z",
             "update_at": "2022-08-31T17:34:23.343Z"
         }
+        ```
 #
 ## [``DELETE``] /api/losses/{loss_id}/
 
@@ -202,7 +209,7 @@ Requisições para a API devem seguir os padrões:
 -   Response 200 (application/json)
 
     -   Body
-
+        ```
         {
             "count": 123,
             "next": "http://api.example.org/accounts/?page=4",
@@ -225,3 +232,4 @@ Requisições para a API devem seguir os padrões:
                 ...
             ]
         }
+        ```
